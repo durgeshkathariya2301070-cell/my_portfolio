@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #F5F1EA;
+  background: #101014;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #101014;
+  --surface: #1B1B22;
+  --accent: #C6A6FF;
+  --accent-secondary: #D9FF70;
+  --text: #F5F1EA;
+  --muted: #A5A1A0;
+  --border: rgba(255, 255, 255, 0.10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button, a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.display-font {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.muted-text {
+  color: var(--muted);
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #C6A6FF, #D9FF70);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+::placeholder {
+  color: #77737C;
+}
